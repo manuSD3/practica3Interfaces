@@ -1,4 +1,5 @@
-Práctica modificada
+Práctica 3.
+
 He creado una pagina nueva a partir de la pagina principal.
 -Es el fichero imagenes.html -
 Se puede acceder desde el enlace (Photos) de la cabecera.
