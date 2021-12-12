@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Roboto:wght@300;400;700&family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../img/logotipo.svg">
+  
+
+    <link rel="stylesheet" href="./formulario_registro.css">
+    <title>Formulario de registro</title>
+    <script type="text/javascript" src="./validacion_registro.js"></script>
+
+  </head>
+  <body>
+
+    <header class="header">
+        <nav>
+            <a href="index.html"> Home </a>
+            <a href="imagenes.html"> Photos</a>
+            <a href="FormularioDeContacto.html"> Contact </a>
+        </nav>
+
+       <div>
+                <button class="botones-header"><a href="formulario_registro.html">Registration</a></button>
+        
+                <button class="botones-header"> <a href="FormularioLogin.html">Login</a></button>
+       </div>
+    </header>
+
+<!--=============FORMULARIO===========================-->
+    <form id="formulario" name="registro" action="formulario_registro.php" method="post" onsubmit="return validarTodo();">
+        <h1>Formulario de registro:</h1>
+
+        <div class="fila">
+            <div class="izquierda">
+                <label for="nombre" required>Nombre completo:</label>  
+            </div>
+            <div class="derecha">
+                <input type="text" id="nombre" name="nombre" onblur="validaNombre()" required/>
+                <p id="nombreMal" class="error"></p>
+            </div>
+        </div>
+        <br>
+        <div class="fila">
+            <div class="izquierda">
+                <label for="fecha_nac">Fecha de nacimiento:</label> 
+            </div>
+            <div class="derecha">
+                <input type="date" id="fecha_nac" name="fecha_nac" onblur="validaFecha()" required />
+                <p id="fechaMal" class="error"></p>
+            </div>
+        </div>
+        <br>
+        <div class="fila">
+            <div class="izquierda">
+                <label for="telefono">Teléfono de contacto:</label>
+            </div>
+            <div class="derecha">
+                <input type="number" id="telefono" name="telefono" onblur="validaTelefono()" required />
+                <p id="telefonoMal" class="error"></p>
+            </div>
+        </div>
+        <br>
+        <div class="fila">
+            <div class="izquierda">
+                <label for="email">Email (Usuario):</label>
+            </div>
+            <div class="derecha">
+                <input type="email" id="email" name="email" onblur="validaEmail()" required />
+                <p id="emailMal" class="error"></p>
+            </div>
+        </div>
+        <br>
+        <div class="fila">
+            <div class="izquierda">
+                <label for="pass">Contraseña:</label>
+            </div>
+            <div class="derecha">
+                <input type="password" id="password" name="pass" onblur="validaPassword(); validaPassword2()" required />
+                <p id="contraseñaMal" class="error"></p>
+            </div>
+        </div>
+        <br>
+        <div class="fila">
+            <div class="izquierda">
+                <label for="pass2">Repita su contraseña:</label>
+            </div>
+            <div class="derecha">
+                <input type="password" id="password2" name="pass2" onblur="validaPassword2()" required />
+                <p id="contraseña2Mal" class="error"></p>
+            </div>
+        </div>
+
+        
+        <br>
+        <br>
+
+        <div class="tabla">
+            <div id="izq">
+                <p>Sexo: </br>
+                    <div class="margenSup">
+                        <p>
+                            <input type="radio" id="hombre" name="genero" value="M" onblur="validaSexo()" required/> <label for="hombre">Hombre</label>
+                        </p> 
+                        <p>
+                            <input type="radio" id="mujer" name="genero" value="F" onblur="validaSexo()" required/>  <label for="mujer">Mujer</label>
+                        </p>
+                        <p>
+                            <input type="radio" id="otro" name="genero" value="I" onblur="validaSexo()" required/>
+                            <label for="otro">Intersexual</label>
+                        </p>
+                        <p id="sexoMal" class="error"></p>
+                    </div>
+                </p>
+            </div>
+            <div id="der">
+                <p>Actividades: <br>
+                    <div class="margenSup">
+                        <div class="izq2">
+                            <input type="checkbox" id="sala" name="actividades" value="salaFitness" onblur="validaActividades()">
+                            <label for="sala">Sala fitness</label> </br>
+                            <input type="checkbox" id="yoga" name="actividades" value="yoga"  onblur="validaActividades()">
+                            <label for="yoga">Yoga</label>
+                        </div>
+                        <div class="der2">
+                            <input type="checkbox" id="spa" name="actividades" value="spa"  onblur="validaActividades()">
+                            <label for="spa">Spa</label> </br>
+                            <input type="checkbox" id="natacion" name="actividades" value="natacion" onblur="validaActividades()">
+                            <label for="natacion">Natación</label>
+                        </div>
+                    
+                    </div> 
+                </p>
+                <p id="actividadesMal" class="error"></p>
+            </div>
+        </div>
+        <br>
+        
+        <label for="horario" id="cabeceraHorario">Horario (pulse para desplegar):</label> 
+        <select id="horario" name="horario">
+            <option value="mañana">Mañana</option>
+            <option value="tarde">Tarde</option>
+            <option value="mañanaYTarde">Mañana y tarde</option>
+        </select>
+
+          <br>
+          <br>
+          <br>
+        
+        
+        <input class="boton" type="submit" value="Enviar" />
+        <input class="boton" type="reset" onclick="limpiarErrores()" value="Limpiar formulario" />
+        <input class="boton" type="button" onclick="validarAntes()" value="Validar antes de enviar" />
+      </form> 
+<!--=============FIN FORMULARIO===========================-->
+
+<footer class="footer">
+    <section>
+        <h2 class="logo">Fitness Hub<span class="puntoLogo">.</span></h2>
+    </section>
+
+    <section class="connect">
+        <h2>Connect</h2>
+            <nav class="centrarFlex">
+                <div class="centrarFlex">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+                      </svg>
+
+                    <a href="https://www.facebook.com/">Facebook</a>
+                </div>
+
+                <div class="centrarFlex">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <rect x="4" y="4" width="16" height="16" rx="4" />
+                        <circle cx="12" cy="12" r="3" />
+                        <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
+                      </svg>
+                    <a href="https://www.instagram.com/">Instagram</a>
+                </div>
+            </nav>
+    </section>
+</footer>
+  </body>
+</html>

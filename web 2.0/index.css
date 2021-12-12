@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+
+    /* Logo */
+    --color-logo-texto: #FCFCFC;
+    --color-logo-punto: #CB2E35;
+
+    /* Tipografía */
+    --texto-normal-contenido: 'Roboto', sans-serif;
+    --texto-logo-cabecera: 'Russo One', sans-serif;
+    --texto-contacto: 'Poppins', sans-serif;
+
+    /* Colores */
+    --color-fondo-header: rgba(19, 22, 33, 0.91);
+    --color-fondo-bloques: #0A1E25;
+    --color-texto: #FFFFFF;
+    --color-botones-gris: #C4C4C4;
+    --color-botones-grisTransp: rgba(149, 145, 151, 0.4);
+    --color-footer-fondo:  rgba(10, 30, 37, 0.82);
+
+    --color-fondo-main: rgba(1, 1, 1, 0.5);
+  }
+
+
+
+/* ==> Globales <== */
+a {
+    text-decoration: none;
+}
+
+body {
+    background-image: url(../img/FondoHome2Reducida.jpg);
+}
+.centrarFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==> Logo <== */
+.logo{
+    font-family: var(--texto-logo-cabecera);
+    font-size: 3rem;
+    color: var(--color-logo-texto);
+    letter-spacing: 5px;
+
+    transition: color 1s steps(3);          /* //// TRANSICIÓN USANDO STEPS ////*/
+
+}
+
+.logo:hover {
+    color: rgb(111, 221, 111);
+}
+
+
+.puntoLogo{
+    color: var(--color-logo-punto);
+}
+
+
+/* ==> header <== */
+.header{
+    background-color: var(--color-fondo-header);
+    height: 10%;
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header div {
+    margin-right: 20px;
+}
+
+.header nav a {
+    font-family: var(--texto-contacto);
+    color: var(--color-texto);
+    font-size: 1.1rem;
+    margin: 0 15px;
+
+    font-size: 300;
+}
+
+.header nav a:hover{
+    color: orange;
+}
+
+.header nav {
+    margin-left: 20px;
+    padding: 12px;
+}
+
+.botones-header {
+    background-color: var(--color-botones-grisTransp);
+    padding: 5px 20px;
+    border: 1px solid var(--color-fondo-header);
+    border-radius: 10px;
+
+   
+    margin-left: 20px;
+    font-family: var(--texto-normal-contenido);
+    font-size: 1rem;
+}
+
+.botones-header a {
+    color: var(--color-texto);
+}
+
+.botones-header a:hover{
+    color: orange;
+}
+
+.botones-header:hover{
+    cursor: hand;
+}
+/* ==> main <== */
+.centrarMain {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 300px;
+    margin-top: -150px;
+    margin-left: -200px;
+
+    
+}
+.contenidoMain {
+    text-align: center;
+    background-color: var(--color-fondo-main);
+}
+
+.contenidoMain div p {
+    font-family: var(--texto-logo-cabecera);
+    font-size: 1.7rem;
+    color: var(--color-logo-texto);
+    letter-spacing: 2px;
+}
+
+.contenidoMain div h2 {
+    font-size: 5rem;
+}
+.join {
+    border-radius: 10px;
+    text-align: center;
+    max-width: 200px;
+   
+    background:rgb(255, 255, 255);
+	
+    margin: 10px;
+    padding: 7px;
+   
+}
+
+.join h3 {
+    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+    font-size: 1.4rem;
+    font-family: var(--texto-normal-contenido);
+    letter-spacing: 1px;
+}
+/* ==> Footer <== */
+.footer{
+    
+      position: absolute;
+      bottom: 0;
+      height: 17%;
+      width: 100%;
+      background-color: var(--color-footer-fondo);
+
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      ;
+  }
+
+.connect {
+    text-align: center;
+    width: 37%;
+}
+.connect h2 {
+    font-family: var(--texto-contacto);
+    font-size: 2.4rem;
+    color: var(--color-texto);
+} 
+.connect nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.connect nav div {
+    margin-left: 15px;
+}
+
+.connect nav div a{
+    margin: 10px;
+    color: var(--color-texto);
+    font-family: var(--texto-contacto);
+}
+
+.connect nav div a:hover{
+    color: orange;
+}

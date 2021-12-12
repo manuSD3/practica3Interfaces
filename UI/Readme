@@ -1,0 +1,6 @@
+# Para poder utilizar la web se necesita subir a un servidor, en nuestro caso hemos utilizado XAMPP.
+  // 1 -> Descargar XAMPP: https://www.apachefriends.org/es/index.html
+  // 2 -> Hacer el clone en la carpeta htdocs
+  // 3 -> Acceder por medio de la siguiente ruta (si esta en alguna subcarpeta cambie la ruta): file:///C:/xampp1/htdocs/Fitness-Hub/web%202.0/index.html
+  // 4 -> Es necesario crear la base de datos en phpmyadmin, con el nombre de gym. 	utf8mb4_spanish_ci
+  // 5 -> Copiar y ejecutar el codigo SQL en phpmyadmin para crear la tabla

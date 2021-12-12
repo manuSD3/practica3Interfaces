@@ -1,0 +1,10 @@
+CREATE TABLE Persons (
+    email varchar (200) PRIMARY KEY,
+    nombre varchar(255),
+    telefono int (9),
+    contraseña varchar (255),
+    /* Sexo: H (hombres), M(mujer), I(Intersexual)*/
+ 	sexo varchar(1),
+    horario varchar (50), 
+    Actividad varchar (40)
+)

@@ -1,0 +1,126 @@
+@import url(index.css);
+
+form {
+  margin: 10% auto 20% auto;
+  width: 40%;
+  background-color: rgba(10, 30, 37, 0.91);
+  color: #FFFFFF;
+  padding: 1% 2% 1% 2%;
+  text-align: left;
+  border-radius: 8px;
+  font-family: var(--texto-logo-cabecera);
+}
+
+input[type=text], input[type=password], input[type=email], input[type=number], input[type=date], select {
+  width: 100%;
+  resize: vertical;
+  font-family: var(--texto-logo-cabecera);
+  padding: 1px;
+  border: none;
+  border-radius: 4px;
+}
+
+input[type=date] {
+  margin-top: 2px;
+  resize: none;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 0px;
+}
+
+
+.izquierda {
+  float: left;
+  width: 30%;
+}
+
+.derecha {
+  float: left;
+  width: 70%;
+}
+
+#cabeceraHorario {
+  margin-top: 7%;
+  margin-bottom:0%;
+  display:inline-grid;
+  float: left;
+}
+
+.boton {
+  text-align: center;
+  cursor: pointer;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+
+  background-color: #C4C4C4;
+  color: #3A494E;
+  clear:both;
+
+  font-family: var(--texto-logo-cabecera);
+}
+
+input[type=submit]:hover {
+  background-color: #8f8f8f;
+}
+
+div .tabla {
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+.izq {
+  float: left;
+  width: 50%;
+  
+}
+
+.der {
+ float: right;
+ width: 50%;
+ 
+}
+
+.izq2 {
+  margin-top: 0%;
+  float: left;
+  width: 50%;
+
+}
+
+.der2 {
+  margin-top: 0%;
+  float: right;
+  width: 50%;
+ 
+}
+
+.margenSup {
+  margin-top: 2%;
+}
+
+.error {
+  color: red;
+}
+
+form h1 {
+  margin-bottom: 10px;
+}
+
+input[type=number]::-webkit-inner-spin-button,  input[type=number]::-webkit-outer-spin-button { 
+-webkit-appearance: none; 
+margin: 0; 
+}
+input[type=number] { -moz-appearance:textfield; }
+
+
+body {
+  background-image: url(../img/fotoFondoLogin.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;   
+}
+

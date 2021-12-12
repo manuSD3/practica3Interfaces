@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Roboto:wght@300;400;700&family=Russo+One&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="../img/logotipo.svg">
+
+
+    <link rel="stylesheet" href="./estilo_practica3.css">
+    <title>Formulario de registro</title>
+    <script type="text/javascript" src="./validacion_registro.js"></script>
+
+</head>
+
+<body>
+
+    <header class="header">
+        <nav>
+            <a href="index.html"> Home </a>
+            <a href="#"> Photos</a>
+            <a href="FormularioDeContacto.html"> Contact </a>
+        </nav>
+
+        <div>
+            <button class="botones-header"><a href="formulario_registro.html">Registration</a></button>
+
+            <button class="botones-header"> <a href="FormularioLogin.html">Login</a></button>
+        </div>
+    </header>
+
+    <div id="cuadro">
+        <!-- imagen con animacion transform -->
+        <img id="img2" src="../img/pesas2Reducida.jpg" alt="setPesas">
+
+        
+        
+        <!-- imagen -->
+        <img id="img1" src="../img/pesasReducida.jpg" alt="pesas">
+        
+        <!-- audio -->
+        <audio preload="auto" controls>
+            <source src="../audio/musica.ogg" type="audio/ogg">
+            El navegador no soporta audio.
+        </audio>
+        
+        
+        
+        <!-- video corto -->
+        <div id="reproductor">
+            <video id="video1" width="100%"  preload="metadata">
+                <source src="../video/video-corto.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+            <br>
+            <button onclick="document.getElementById('video1').play()">
+                <img src="../img/iconos/play.png" />
+            </button>
+            <button onclick="document.getElementById('video1').pause()">
+                <img src="../img/iconos/pausa.png" />
+            </button>
+            <button onclick="document.getElementById('video1').volume+=0.1">
+                <img src="../img/iconos/mas.png" />
+            </button>
+            <button onclick="document.getElementById('video1').volume-=0.1">
+                <img src="../img/iconos/menos.png" />
+            </button>
+        </div>
+        <!-- video largo -->
+        <div id="reproductor">
+            <video id="video2" width="100%"  preload="auto">
+                <source src="../video/video-largo.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+            <br>
+            <button onclick="document.getElementById('video2').play()">
+                <img src="../img/iconos/play.png" />
+            </button>
+            <button onclick="document.getElementById('video2').pause()">
+                <img src="../img/iconos/pausa.png" />
+            </button>
+            <button onclick="document.getElementById('video2').volume+=0.1">
+                <img src="../img/iconos/mas.png" />
+            </button>
+            <button onclick="document.getElementById('video2').volume-=0.1">
+                <img src="../img/iconos/menos.png" />
+            </button>
+        </div>
+        <!-- <br> <br> <br> -->
+        
+        <!-- dialog -->
+        <dialog id="dialogo">
+            <p>Esto es un diálogo</p>
+            <button id="cerrar">Cerrar</button>
+        </dialog>
+        <button id="mostrar">Mostrar diálogo</button> <br> <br> <br>
+    
+        <script>
+            var mostar = document.getElementById('mostrar');
+            var cerrar = document.getElementById('cerrar');
+            var dialogo = document.getElementById('dialogo');
+    
+            mostrar.addEventListener('click', function () {
+                dialogo.showModal();
+            });
+    
+            // Form cancel button closes the dialog box
+            cerrar.addEventListener('click', function () {
+                dialogo.close();
+            });
+        </script>
+        <!-- fin dialog -->
+
+    </div>
+    
+    
+    <footer class="footer">
+        <section>
+            <h2 class="logo">Fitness Hub<span class="puntoLogo">.</span></h2>
+        </section>
+
+        <section class="connect">
+            <h2>Connect</h2>
+            <nav class="centrarFlex">
+                <div class="centrarFlex">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook"
+                        width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+                    </svg>
+
+                    <a href="https://www.facebook.com/">Facebook</a>
+                </div>
+
+                <div class="centrarFlex">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram"
+                        width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <rect x="4" y="4" width="16" height="16" rx="4" />
+                        <circle cx="12" cy="12" r="3" />
+                        <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
+                    </svg>
+                    <a href="https://www.instagram.com/">Instagram</a>
+                </div>
+            </nav>
+        </section>
+    </footer>
+</body>
+
+</html>

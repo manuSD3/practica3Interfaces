@@ -1,0 +1,114 @@
+@import url(index.css);
+@import url(formulario.css);
+
+
+body {
+    background-image: url(../img/fondoImagenesCCReducido.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;   
+    
+  }
+
+#cuadro {
+    margin: 5% auto 10% auto;
+    width: 80%;
+    background-color: rgba(10, 30, 37, 0.91);
+    color: #FFFFFF;
+    padding: 1% 2% 1% 2%;
+    text-align: left;
+    border-radius: 8px;
+    font-family: var(--texto-logo-cabecera);
+
+}
+
+
+form div {
+    margin-top: 12px;
+}
+
+
+/* ESTILO PARA LA PRÁCTICA 3 */
+
+/* estilo para las imagenes */
+#img1, #img2 {
+    /* bordes redondeados */
+    border-radius: 8px;
+
+    /* para centrar la imagen */
+    /* display: block;
+     margin-left: auto;
+    margin-right: auto;
+    */
+    width: 15%;
+
+    /* sombra */
+    box-shadow: 0px 0px 15px black;
+}
+
+/* animacion a imagen usando transform */
+#img2 {
+    width: 15%;
+    padding: 1px;
+    animation: girar 10s infinite;
+    transform: rotate(30deg);
+    
+  }
+  
+  @keyframes girar {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+/* dialog cuyo fondo oculte el resto de la pagina */
+dialog::backdrop {
+    background: rgb(0, 0, 0); /* esa propiedad le pone el fondo de un color al dialog, lo que hace que se oculte el resto de la pagina */
+  }
+  
+  #mostrar {
+    
+    border: none;
+    padding: .7rem 1.4rem;
+    font-size: 1.5rem;
+    border-radius: 7px;
+    
+  }
+  
+  #mostrar:hover {
+    /* background-color: #43AED6; */
+    transition: .2s ease-in;
+  }
+  
+  #dialogo {
+    
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  #cerrar {
+    /* background: #67C3E6; */
+    border: none;
+    border-radius: 5px;
+    padding: .4rem 1rem;
+    
+  }
+
+button img {
+    width: 40px;
+    height: 40px;
+}
+
+#reproductor {
+    width: 17%;
+    display:inline-block;
+}
+
+
+#reproductor button {
+    width: 50px;
+}

@@ -1,0 +1,30 @@
+@import url(index.css);
+@import url(formulario.css);
+
+form {
+    margin: 5% auto 10% auto;
+    width: 40%;
+    background-color: rgba(10, 30, 37, 0.91);
+    color: #FFFFFF;
+    padding: 1% 2% 1% 2%;
+    text-align: left;
+    border-radius: 8px;
+    font-family: var(--texto-logo-cabecera);
+}
+
+#izq {
+    float: left;
+    width: 50%;
+    /* display:inline; */
+  }
+
+#der {
+   float: right;
+   width: 50%;
+   /* display:inline; */
+  }
+
+form div {
+    margin-top: 12px;
+}
+
